@@ -40,10 +40,11 @@ if [ "$1" = "$FDEVICE" ] || [  "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 
 	# Build Environment
 	export LC_ALL="C"
+	export TW_DEFAULT_LANGUAGE="en"
 
 	# Version / Maintainer infos
 	export OF_MAINTAINER="VertekPlus"
-	export FOX_VERSION="R14.1"
+	export FOX_VERSION="R12.1"
 	export FOX_BUILD_TYPE="Stable"
                
 	# Device info
@@ -65,13 +66,10 @@ if [ "$1" = "$FDEVICE" ] || [  "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_ALLOW_DISABLE_NAVBAR=0
 	export OF_QUICK_BACKUP_LIST="/boot;/data;"
 	export FOX_ENABLE_APP_MANAGER=1
-	export OF_FLASHLIGHT_ENABLE=0
-	export TW_DEFAULT_LANGUAGE="en"
-	export OF_USE_SYSTEM_FINGERPRINT=1
-	export FOX_REPLACE_BUSYBOX_PS=1
-	export OF_FORCE_MAGISKBOOT_BOOT_PATCH_MIUI=1
+	export FOX_DELETE_AROMAFM=1
+	export FOX_DELETE_MAGISK_ADDON=1
 	export OF_USE_NEW_MAGISKBOOT=1
-	export OF_SKIP_MULTIUSER_FOLDERS_BACKUP=1
+	export OF_FLASHLIGHT_ENABLE=0
     
 	# Run a process after formatting data to work-around MTP issues
 	export OF_RUN_POST_FORMAT_PROCESS=1
